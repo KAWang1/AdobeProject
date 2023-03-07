@@ -1,7 +1,6 @@
+import os
 import openai
-openai.api_key = "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"
-
-
+openai.api_key = os.getenv("OPENAI_API_KEY")
 prompt = input("What would you like a color palette for?\n")
 
 response = openai.Completion.create(
